@@ -3,5 +3,5 @@ Tool for running random lightshot urls through a web scraper to download the ima
 
 ## Requirements
 ### Windows
->pip install beautifulsoup4
+>pip install beautifulsoup4\
 >pip install requests

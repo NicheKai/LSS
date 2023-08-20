@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import requests
-from PIL import Image
 import random
 import string
 
@@ -37,8 +36,7 @@ def puller():
 
     try:
         urllib.request.urlretrieve(photo, tradress)
-        img = Image.open(tradress)
-        img.show()
+        
     except:
         print("image removed :(")
 

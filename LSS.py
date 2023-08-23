@@ -47,6 +47,14 @@ def puller():
         print(Fore.RED+"image removed :(")
 
 amount = int(input("How many links would you like to test: "))
+runtimer = (amount*0.43)
+
+if amount < 60:
+    print("Predicted run time: ",runtimer,"secs")
+else:
+    print("Predicted run time:",runtimer/60,"mins")
+
+time.sleep(3)
 
 start = time.time()
 
@@ -58,6 +66,8 @@ for i in range(amount):
 end = time.time()
 
 print(win, "/",amount," successful")
+print("Runtime: ",(end-start))
 print("Average time per attempt: ",((end-start)/amount))
-print("Average time per successful image output: ",((end-start)/win))
+if win != 0:
+    print("Average time per successful image output: ",((end-start)/win))
 confirm = input("Press enter to close the program.")
